@@ -11,7 +11,7 @@
     -->
     <div
       id="g_id_onload"
-      data-client_id="1020203019334-4l5hjs9ahkv9pk03db4imf4rb7crnfm3.apps.googleusercontent.com"
+      data-client_id="<your_google_client_id>"
       data-callback="handleCredentialsResponse"
     ></div>
   </body>
@@ -22,7 +22,7 @@
   <!-- Log in with Realm and Google Authentication -->
   <script async defer>
     const app = new Realm.App({
-      id: "realmauthexamples-vpkor",
+      id: "<your_realm_app_id>",
     });
     // Callback used in `data-callback` to handle Google's response and log user into Realm
     function handleCredentialsResponse(response) {
