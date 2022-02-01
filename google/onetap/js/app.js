@@ -7,10 +7,11 @@ function ignite (uid) {
     let url = `https://data.mongodb-api.com/app/realmauthexamples-vpkor/endpoint/darksaber/ignite`
 
     const params = {
+        //mode: 'no-cors',
         method: "post",
         headers: {
             "Content-Type": "application/json;charset=utf-8",
-            "jwtTokenString": jwt
+            //"jwtTokenString": jwt
         }
     }
 
