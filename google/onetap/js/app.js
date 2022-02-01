@@ -1,22 +1,22 @@
-function ignite (uid) {
+async function ignite (uid) {
 
      // Get the JWT token
-     jwt = localStorage.getItem("jwt");
+     //jwt = localStorage.getItem("jwt");
 
 
     let url = `https://data.mongodb-api.com/app/realmauthexamples-vpkor/endpoint/darksaber/ignite`
 
     const params = {
-        //mode: 'no-cors',
+        //mode: "no-cors",
         method: "post",
         headers: {
             "Content-Type": "application/json;charset=utf-8",
             //"jwtTokenString": jwt
+           "Authorization": uid
         }
     }
 
-    //return fetchHelper(url, uid, data);
-    return fetch(url, params)
+    return await fetch(url, params)
         .then(handleErrors)
         .then(response => response.json())
         .catch(error => console.log(error));

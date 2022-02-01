@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel=icon href=/img/favicon.ico>
 
 <head>
     <title>Google One Tap Example</title>
@@ -34,20 +35,20 @@
             .logIn(credentials)
             .then((user) => alert(`Logged in with id: ${user.id}`));
 
-        // Store the JWT token
-        localStorage.setItem("jwt", response);
+        // Store the JWT token 
+        //localStorage.setItem("jwt", response);
 
     }
 
     const endpointButton = document.getElementById("realm-endpoint");
     endpointButton.addEventListener("click", () => {
         currentUserId = app.currentUser.id;
+        currentUser = app.currentUser;
         console.log(`Logged in with id: ${currentUserId}`);
 
         ignite(currentUserId)
             .then(response => {
                 document.getElementById("response").innerHTML = response;
-                //console.log(response);
             })
     });
 
